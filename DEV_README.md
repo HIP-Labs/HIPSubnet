@@ -41,7 +41,7 @@ The `HIPProtocol` class contains the following fields:
 The `HIPProtocol` class includes `serialize` and `deserialize` methods for converting the protocol instance to and from bytes for network transmission.
 
 ## Front-facing Interface
-To provide a user-friendly experience for miners and validators, the HIP subnet plans to integrate a front-facing interface using React and Next.js. The interface will communicate with the subnet through a REST API.
+To provide a user-friendly experience for miners and validators, the HIP subnet plans to integrate a front-facing interface using React (Maybe Next.js). The interface will communicate with the subnet through a REST API.
 
 The front-facing interface will offer the following features:
 

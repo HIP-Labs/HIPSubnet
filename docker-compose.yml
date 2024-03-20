@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  subtensor-localnet:
+    container_name: HIPSubnet
+    image: HIP-Labs/HIPSubnet:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./blockchain:/tmp/blockchain
+    cpu_count: 4
+    mem_limit: 40000000000
+    memswap_limit: 80000000000
+    command:
+      - /bin/bash
+      - -c
+      - |
+        /usr/src/subnet/scripts/run_subnet.sh &> /usr/src/subnet/logs/subnet-script-logs.txt &
+        /subtensor/scripts/localnet.sh &> /usr/src/subnet/logs/blockchain-logs.txt
